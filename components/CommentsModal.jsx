@@ -57,19 +57,68 @@ export default function CommentsModal(props) {
 
 const styles = StyleSheet.create({
     modal: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'black'
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: 'rgba(0, 0, 0, 0.8)'
     },
-    button: {
-        marginBottom: 5,
-        alignItems: 'center',
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: 'black',
+      paddingHorizontal: 20,
+      paddingTop: 20
     },
-    background: {
-        flex: 1,
-        backgroundColor: 'black'
+    title: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      color: 'white',
+      marginBottom: 10
     },
-    text: {
-        color: 'white',
+    subtitle: {
+      fontSize: 18,
+      fontWeight: 'bold',
+      color: 'white',
+      marginBottom: 10
     },
-});
+    commentList: {
+      maxHeight: '50%'
+    },
+    commentContainer: {
+      backgroundColor: '#333',
+      padding: 10,
+      borderRadius: 5,
+      marginBottom: 10
+    },
+    author: {
+      fontSize: 16,
+      fontWeight: 'bold',
+      color: 'white'
+    },
+    content: {
+      fontSize: 14,
+      color: 'white',
+      marginTop: 5
+    },
+    buttonsContainer: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginTop: 10
+    },
+    editButton: {
+      backgroundColor: 'skyblue',
+      marginRight: 5
+    },
+    deleteButton: {
+      backgroundColor: 'tomato',
+      marginLeft: 5
+    },
+    addButton: {
+      backgroundColor: 'skyblue',
+      marginRight: 10
+    },
+    closeButton: {
+      backgroundColor: 'tomato',
+      marginLeft: 10
+    }
+  });

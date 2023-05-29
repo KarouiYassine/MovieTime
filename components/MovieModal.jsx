@@ -41,19 +41,52 @@ export default function MovieModal(props) {
 
 const styles = StyleSheet.create({
     modal: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'black'
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: 'rgba(0, 0, 0, 0.8)'
     },
-    button: {
-        marginBottom: 5,
-        alignItems: 'center',
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: 'black',
+      paddingHorizontal: 20,
+      paddingTop: 20
     },
-    background: {
-        flex: 1,
-        backgroundColor: 'black'
+    title: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      color: 'white',
+      marginBottom: 10
+    },
+    input: {
+      borderWidth: 2,
+      borderColor: 'skyblue',
+      padding: 10,
+      marginBottom: 10,
+      width: '100%',
+      color: 'white'
     },
     text: {
-        color: 'white',
+      fontSize: 18,
+      fontWeight: 'bold',
+      color: 'white',
+      marginBottom: 5
     },
-});
+    placeholder: {
+      color: 'lightgrey'
+    },
+    buttonContainer: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginTop: 20
+    },
+    addButton: {
+      backgroundColor: 'skyblue',
+      marginRight: 10
+    },
+    closeButton: {
+      backgroundColor: 'tomato',
+      marginLeft: 10
+    }
+  });

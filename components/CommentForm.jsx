@@ -14,28 +14,32 @@ export default function CommentForm(props) {
 
 const styles = StyleSheet.create({
     container: {
-        justifyContent: 'center',
-        alignItems: 'center',
+      justifyContent: 'center',
+      alignItems: 'center',
+      paddingHorizontal: 20,
+      paddingTop: 20,
     },
     input: {
-        borderWidth: 2,
-        borderColor: "skyblue",
-        padding: 10,
-        marginBottom: 4,
-        width: '90%',
+      borderWidth: 2,
+      borderColor: 'skyblue',
+      padding: 10,
+      marginBottom: 4,
+      width: '90%',
+      color: 'white',
     },
     first: {
-        height: 40,
+      height: 40,
     },
     second: {
-        height: 120,
+      height: 120,
     },
     text: {
-        fontWeight: 'bold',
-        fontSize: 18,
-        color: 'white'
+      fontWeight: 'bold',
+      fontSize: 18,
+      color: 'white',
+      marginBottom: 5,
     },
     placeholder: {
-        color: 'lightgrey'
+      color: 'lightgrey',
     },
-});
+  });

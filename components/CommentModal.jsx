@@ -63,19 +63,32 @@ export default function CommentModal(props) {
 
 const styles = StyleSheet.create({
     modal: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'black'
-    },
-    button: {
-        marginBottom: 5,
-        alignItems: 'center',
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: 'rgba(0, 0, 0, 0.8)'
     },
     background: {
-        flex: 1,
-        backgroundColor: 'black'
+      flex: 1,
+      backgroundColor: 'black',
+      paddingHorizontal: 20,
+      paddingTop: 20
+    },
+    input: {
+      borderWidth: 2,
+      borderColor: 'skyblue',
+      padding: 10,
+      marginBottom: 10,
+      width: '100%',
+      color: 'white'
     },
     text: {
-        color: 'white',
+      fontSize: 18,
+      fontWeight: 'bold',
+      color: 'white',
+      marginBottom: 5
     },
-});
+    button: {
+      marginBottom: 5,
+      alignItems: 'center'
+    }
+  });

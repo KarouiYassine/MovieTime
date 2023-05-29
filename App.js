@@ -148,6 +148,7 @@ export default function App() {
 
 
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -157,15 +158,17 @@ const styles = StyleSheet.create({
   },
   textPrimary: {
     color: 'skyblue',
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 10,
   },
   text: {
     color: 'white',
   },
   logo: {
-    justifyContent: 'center',
-    alignItems: 'center',
     width: 280,
     height: 200,
+    marginBottom: 20,
   },
   scrollView: {
     backgroundColor: 'black',
@@ -184,5 +187,27 @@ const styles = StyleSheet.create({
   filterButtonText: {
     color: 'white',
     fontWeight: 'bold',
+  },
+  movieContainer: {
+    marginBottom: 20,
+    alignItems: 'center',
+  },
+  movieImage: {
+    width: 180,
+    height: 300,
+    marginBottom: 10,
+  },
+  movieDetails: {
+    marginBottom: 10,
+  },
+  movieTitle: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 5,
+  },
+  movieSynopsis: {
+    color: 'white',
+    fontSize: 14,
   },
 });
