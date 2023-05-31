@@ -133,9 +133,7 @@ export default function App() {
             movie={toEditMovie}
           />
         )}
-        <TouchableOpacity style={styles.floatingButton} onPress={() => setIsModalVisible(true)}>
-          <Ionicons name="add-circle" size={64} color="skyblue" />
-        </TouchableOpacity>
+      
       </SafeAreaView>
     </View>
   );
