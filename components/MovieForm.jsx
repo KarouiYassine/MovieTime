@@ -5,11 +5,11 @@ export default function MovieForm(props) {
 
     return (
         <View>
-            <Text style={styles.text}>Titre:</Text>
+            <Text style={styles.title}>Titre:</Text>
             <TextInput style={[styles.input, styles.first, styles.placeholder]} placeholder="Titre..." value={props.title} onChangeText={props.handleTitleChange}></TextInput>
             <Text style={styles.text}>Image:</Text>
             <TextInput style={[styles.input, styles.first, styles.placeholder]} placeholder="Image" value={props.image} onChangeText={props.handleImageChange}></TextInput>
-            <Text style={styles.text}>Synopsis:</Text>
+            <Text style={styles.synopsis}>Synopsis:</Text>
             <TextInput style={[styles.input, styles.second, styles.placeholder]} placeholder="Synopsis..." value={props.synopsis} onChangeText={props.handleSynopsisChange} multiline></TextInput>
         </View>
     )
@@ -34,7 +34,17 @@ const styles = StyleSheet.create({
         height: 120,
     },
     text: {
+        fontWeight: 'normal',
+        fontSize: 18,
+        color: 'white'
+    },
+    title: {
         fontWeight: 'bold',
+        fontSize: 25,
+        color: 'white'
+    },
+    synopsis: {
+        fontWeight: 'normal',
         fontSize: 18,
         color: 'white'
     },
