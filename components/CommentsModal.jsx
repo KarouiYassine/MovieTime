@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
   addButton: {
     backgroundColor: 'transparent',
     marginRight: 10,
-    position: "fixed",
+    position: "absolute",
     bottom: 20,
     right: 20,
   },
