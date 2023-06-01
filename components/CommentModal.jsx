@@ -1,14 +1,14 @@
-import { View, Text, Modal, StyleSheet } from 'react-native'
-import React, { useState } from 'react'
-import { updateMovie } from '../Fire'
-import CommentForm from './CommentForm'
-import AddButton from './AddButton'
+import { View, Text, Modal, StyleSheet, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { updateMovie } from '../Fire';
+import CommentForm from './CommentForm';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function CommentModal(props) {
-    const [author, setAuthor] = useState(props.toEditComment ? props.toEditComment.author : "")
-    const [content, setContent] = useState(props.toEditComment ? props.toEditComment.content : "")
+  const [author, setAuthor] = useState(props.toEditComment ? props.toEditComment.author : '');
+  const [content, setContent] = useState(props.toEditComment ? props.toEditComment.content : '');
 
-    const handleSubmit = () => {
+  const handleSubmit = () => {
         let movie = {
             "title": props.movie.title,
             "synopsis": props.movie.synopsis,
@@ -44,38 +44,55 @@ export default function CommentModal(props) {
             updateMovie(movie)
         }
         props.onClose()
-    }
-    console.log(author);
-    return (
-        <View>
-            <Modal visible={props.isVisible} style={styles.modal}>
-                <View style={styles.background}>
-                    <CommentForm author={author} content={content} handleAuthorChange={newAuthor => setAuthor(newAuthor)} handleContentChange={newContent => setContent(newContent)} />
+    };
 
-                    <View style={styles.button}><AddButton content="Valider" onClick={handleSubmit} /></View>
-                    <View style={styles.button}><AddButton content="Fermer" onClick={props.onClose} /></View>
-                </View>
-            </Modal>
+  return (
+    <View>
+      <Modal visible={props.isVisible} style={styles.modal}>
+        <View style={styles.background}>
+          <CommentForm
+            author={author}
+            content={content}
+            handleAuthorChange={(newAuthor) => setAuthor(newAuthor)}
+            handleContentChange={(newContent) => setContent(newContent)}
+          />
+
+          <View style={styles.buttonContainer}>
+            <TouchableOpacity style={styles.iconButton} onPress={handleSubmit}>
+              <Ionicons name="checkmark" size={40} color="lightgreen" />
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.iconButton} onPress={props.onClose}>
+              <Ionicons name="close" size={40} color="red" />
+            </TouchableOpacity>
+          </View>
         </View>
-    )
+      </Modal>
+    </View>
+  );
 }
 
-
 const styles = StyleSheet.create({
-    modal: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'black'
-    },
-    button: {
-        marginBottom: 5,
-        alignItems: 'center',
-    },
-    background: {
-        flex: 1,
-        backgroundColor: 'black'
-    },
-    text: {
-        color: 'white',
-    },
+  modal: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'black',
+  },
+  iconButton: {
+    alignItems: 'center',
+    marginRight: 10,
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    marginBottom: 5,
+  },
+  background: {
+    flex: 1,
+    backgroundColor: 'black',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  text: {
+    color: 'white',
+  },
 });
